@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --first-color: hsl(16, 70%, 45%);
+  --second-color: hsl(20, 77%, 60%);
+  --title-color: hsl(244, 12%, 12%);
+  --text-color: hsl(244, 4%, 36%);
+  --body-color: hsl(0, 10%, 84%);
+
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+
+body{
+    /* background:url('../img/homewallpaper.jpg'); */
+    background-color: hsla(253, 9%, 81%, 0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.message{
+    color: rgb(255, 47, 0);
+    size: 20px;
+    margin-top: 20px;
+}
+
+
+.navbar{
+    background-color:rgb(255, 255, 255);
+    opacity: 90%;
+    height: 100px;
+}
+.navbar-logo {
+    margin: 15px -60px;
+
+}
+.nav-link
+{
+    color:#000000; 
+    font-size: 20px;
+}
+
+#logout-link
+{
+        width: 100%;
+        padding: 14px 2rem;
+        border-radius: 30px;
+        background: linear-gradient(180deg, var(--first-color), var(--second-color));
+        color: #fff;
+        font-size: var(--small-font-size);
+        font-weight: var(--font-semi-bold);
+        box-shadow: 0 2px 11px hsl(16, 70%, 45%);
+        margin-top: 7px;
+        
+}
+
+#logout-link:hover
+{
+
+  background: linear-gradient(180deg, var(--first-color), var(--second-color));
+  color: #9c6060;
+}
+.navbar
+{
+    border: none;
+}
+.navbar-nav li:not(:last-child) {
+    margin-right: 30px;
+  }
+
+.banner-container img {
+    height: 800px;
+    opacity: 100%;
+    
+}
+
+  

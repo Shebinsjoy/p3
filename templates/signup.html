@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}" />
+    <title>signup</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+          <div class="login__content">
+            <img class="login__img" src="{% static 'img/bg-login.JPEG'%}" alt="Login image" />
+  
+  
+            <form class="signup__form"  action ="" method="post">
+
+                {% csrf_token %}
+                <div>
+                    <h1 class="login__title">
+                      <span>Sign</span> Up
+                    </h1>
+                  </div>
+                
+            
+                <div class="signup__inputs">
+                    <label class="login__label" for="username" class=>Username : </label>
+                    <input class="signup__input" type="text" id="username" name="username" required >    
+                </div>
+            
+                <div class="signup__inputs">
+                    <label for="fname" class="login__label" id="fnamelabel">First Name : </label>
+                    <input class="signup__input" type="text" id="Fname" name="fname" required >
+                </div>
+            
+                <div class="signup__inputs">
+                    <label for="lname" class="login__label">Last Name : </label>
+                    <input class="signup__input" type="text"  id="Lname" name="lname" required >
+                </div>
+            
+                <div class="signup__inputs">
+                    <label for="Email" class="login__label me-4 pe-3">Email Id : </label>
+                    <input class="signup__input" type="email" id="Email" name="email" required aria-describedby="emailHelp">
+                </div>
+                <div class="signup__inputs">
+                    <label for="Password1" class="login__label me-4 pe-2">Password : </label>
+                    <input class="signup__input" type="password" id="password1" name="pass1" required >
+                </div>
+            
+                <div class="signup__inputs">
+                    <label  for="Password2" class="login__label me-1" id="passtwolabel">Confirm Password :</label>
+                    <input class="signup__input" type="password"  id="password2" name="pass2" required >
+                </div>
+            
+                <button class="signup__button" type="submit" class="btn btn-primary">Register</button>
+                <div class="message-holder mt-3">
+                  {% if messages %}
+                    <ul class="messages">
+                      {% for message in messages %}
+                        <li {% if message.tags %}class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </div>
+            </form>
+          
+              </div>
+          </div>
+        </div>
+      </div>
+  
+    <script src="{% static 'js/main.js'%}"></script>
+
+</body>
+</html>
